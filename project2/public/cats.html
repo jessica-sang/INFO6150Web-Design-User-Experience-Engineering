@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--title of the website-->
+        <title>Famous Cats</title>
+        <!--linked to two styles format-->
+        <link rel = "stylesheet" href="css/global.css"/>
+        <link rel = "stylesheet" href="css/cats.css"/>
+        <script defer src="js/cats.js"></script>
+        <script defer src="js/global.js"></script>
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body>
+
+        <a class="skiplink" href="#main">Skip to Content</a>
+
+        <!--header would contain a picture at left and the content is Cats Power the Internet-->
+        <header class = "header">
+            <a href="index.html"><img class = "header_logo" src = "https://placekitten.com/200/140" alt = "loge_website"></a>
+            <h1 class="header_title">Cats Power the Internet</h1>
+            
+            <!--hamburger menu-->
+            <button id="hamburger" class="hamburger__menu" aria-label="Show Navigation Menu" aria-expanded="false" tabindex="0">
+                ☰
+            </button>
+            <!-- <div class="hamburger__menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div> -->
+
+        </header>
+        
+        <!--nav have "Home" "Famous Cats"  "Cats Events"-->
+
+        <nav class = "nav">
+            <ul class = "nav_menu">
+                <li class = "nav_menu_item1"><a class = "nav__link" href = "Index.html"> Home</a></li>
+                <li class = "nav_menu_item2"><a class = "nav__link" href = "cats.html"> Famous Cats</a></li>
+                <li class = "nav_menu_item3"><a class = "nav__link" href = "Cats Events.html"> Cats Events</a></li>
+            </ul>
+        </nav>
+
+        <!--main contain a picture and a paragraph-->
+        <main class = "main">
+
+            <!-- This is the form class, which is subscribe button-->
+            <dialog class="modal">
+        
+                <form class="subscribe" action="/subscribe" method="POST">
+        
+                  <h2 class="form__title">Subscribe to the Latest Mews!</h2>               
+                  <label for="email1" class="register__email--label1">Email:&nbsp *required</label>
+                  <input type="text" name="Email" id="email1" class="email1">
+        
+                  <span class="register-email1__error"></span>
+          
+                  <label for="email2" class="register__email--label2">Confirm Email:&nbsp *required</label>
+                  <input type="text" name="Confirm Email" id="email2" class="email2">
+        
+                  <span class="register-email2__error"></span>
+          
+                  <button type="submit" class="subscribe__submit">Subscribe</button>
+                  <button type="button" class="close">Cancel</button>
+                  
+                </form>
+        
+            </dialog>
+
+            <!--there are total 6 cards in this area-->
+            <div class = "cards">
+
+                <!--this is the first card-->
+                <div class = "card">
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card__title"> Jorts</h3>
+                    <!--a cat picture-->
+                    <img src = "https://placekitten.com/200/139" alt = "cat one" class = "card__pic">                   
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card__text"> 
+                        <p>Scratch me now! stop scratching me! </p>
+                        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot</p>
+                        <p>Hairball run catnip eat the grass sniff do doodoo in the litter-box.</p>
+                        <p>Ipsum lorem sit <button class="open1" type="button">Subscribe</button>,  voluptate inventore </p>
+                    </div>
+                    
+                </div>
+
+                <!--this is the second card-->
+                <div class = "card">
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card__title"> Jean</h3>
+                    <!--a cat picture-->
+                    <img src = "https://placekitten.com/408/287" alt = "cat one" class = "card__pic">
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card__text"> 
+                        <p>Scratch me now! stop scratching me! </p>
+                        <p>kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff do doodoo in the litter-box.</p>
+                        <p>Ipsum lorem sit <button class="open2" type="button">Subscribe</button>,  voluptate inventore </p>
+                    </div>
+                </div>
+
+                <!--this is the third card-->
+                <div class = "card"> 
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card__title"> Maru</h3>
+                    <!--a cat picture-->
+                    <img src = "https://placekitten.com/200/287" alt = "cat one" class = "card__pic">
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card__text"> 
+                        <p>Hunt anything. Hiss at vacuum cleaner i heard this rumor where the humans are our owners, pfft</p>
+                        <p> what do they know?!. Meow.</p>
+                        <p>Ipsum lorem sit <button class="open3" type="button">Subscribe</button>,  voluptate inventore </p>
+                    </div>
+                </div>
+
+                <!--this is the forth card-->
+                <div class = "card"> 
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card__title"> Nyancat</h3>
+                    <!--a cat picture-->
+                    <img src = "https://placekitten.com/200/138" alt = "cat one" class = "card__pic">
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card__text"> 
+                        <p>Hunt anything. Hiss at vacuum cleaner i heard this rumor where the humans are our owners, pfft</p>
+                        <p> what do they know?!. Meow.</p>
+                        <p>Ipsum lorem sit <button class="open4" type="button">Subscribe</button>,  voluptate inventore </p>
+                    </div>
+                </div>
+
+                <!--this is the fifth card-->
+                <div class = "card"> 
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card__title"> Grumpy Cat</h3>
+                    <!--a cat picture-->
+                    <img src = "http://placekitten.com/g/200/300"cat one" class = "card__pic">
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card__text">
+                        <p>Hunt anything. Hiss at vacuum cleaner i heard this rumor where the humans are our owners, pfft</p>
+                        <p> what do they know?!. Meow.</p>
+                        <p>Ipsum lorem sit <button class="open5" type="button">Subscribe</button>,  voluptate inventore </p>
+                    </div>
+                </div>
+
+                <!--this is the sixth card-->
+                <div class = "card"> 
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card__title"> Lil Bub</h3>
+                    <!--a cat picture-->
+                    <img src = "https://placekitten.com/200/140" alt = "cat one" class = "card__pic">
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card__text"> 
+                        <p>Hunt anything. Hiss at vacuum cleaner i heard this rumor where the humans are our owners, pfft</p>
+                        <p> what do they know?!. Meow.</p>
+                        <p>Ipsum lorem sit <button class="open6" type="button">Subscribe</button>,  voluptate inventore </p>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+        <!-- footer will contain four link-->
+        <footer class = "footer">
+            <nav class = "footer_nav">
+                <ul class = "footer_menu">
+                    <li class = "footer_item"><a class = "footer_link" href = "Privacy Policy.html">Privacy Policy</a></li>
+                    <li class = "footer_item"><a class = "footer_link" href = "Work For Us.html">Work For Us</a></li>
+                    <li class = "footer_item"><a class = "footer_link" href = "Contact Us.html">Contact Us</a></li>
+                    <li class = "footer_item"><a class = "footer_link" href = "Social Media.html">Social Media</a></li>
+                </ul>
+            </nav> 
+        </footer>
+
+    </body>
+</html>

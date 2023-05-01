@@ -1,0 +1,93 @@
+
+/*The cards are evenly distributed using a 12-column grid*/
+.cards{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    margin-top: auto;
+
+    gap : 2rem;
+
+}
+
+.card{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid lightcoral;
+    border-radius: 20px;
+    padding: 1rem;
+    background-color: pink;
+}
+
+.card_1{
+    background-color: rgba(227, 85, 85, 0.974);
+}
+.card_2{
+    background-color: rgba(244, 193, 85, 0.966);
+}
+.card_3{
+    background-color: rgba(161, 246, 136, 0.901);
+}
+
+.card:hover{
+    box-shadow: 2px 2px 5px 5px rgb(24, 24, 24);
+}
+
+.card_pic{
+    aspect-ratio: 1/1;
+    width: 50%;
+}
+
+.card_text{
+    height : 100%;
+    margin-top: auto;
+}
+
+/*The links should appear in the same line across all the cards (when the cards on aligned)*/
+.card_link{
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: darkgreen;
+    color:white;
+    font: inherit;
+}
+
+/*The links in the cards will look like buttons, including a call to action color*/
+.card_link:hover{
+    color: black;
+    background-color: gold;
+    box-shadow: 2px 2px 5px 5px purple;
+}
+
+.card_title{
+    color:darkmagenta;
+    text-align: center;
+}
+
+/*The h3 heading should span the page*/
+.h3_title{
+    grid-column: span 12;
+    text-align: center;
+    color: blueviolet;
+}
+
+
+@media screen and (min-width:50rem) {
+    /*At the adaptive breakpoint the menu converts to vertical list*/
+
+    .cards {
+        display: grid;
+        margin-top: auto;
+        grid-template-columns: repeat(12,1fr);
+    }
+    
+}

@@ -1,0 +1,178 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    background-color: papayawhip;
+    font-family: sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: burlywood;
+}
+
+/*logo need to present the left of the h1 text*/
+.header__logo{
+    align-self: flex-start;
+    aspect-ratio: 1/1;
+}
+
+.header__title{
+    margin: 0 auto;
+}
+
+/*the nav menu is horizontal links spanning the width of the header*/
+.nav__menu{
+    background-color:rgb(142, 177, 90);
+
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+/*The cards are evenly distributed using a 12-column grid*/
+.cards{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    margin-top: auto;
+
+    gap : 2rem;
+
+}
+
+.card{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid lightcoral;
+    border-radius: 20px;
+    padding: 1rem;
+    background-color: pink;
+}
+
+.card__pic{
+    aspect-ratio: 1/1;
+    width: 50%;
+}
+
+.card__text{
+    height : 100%;
+    margin-top: auto;
+}
+
+/*The links should appear in the same line across all the cards (when the cards on aligned)*/
+.card__link{
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: darkgreen;
+    color:white;
+    font: inherit;
+}
+
+/*The links in the cards will look like buttons, including a call to action color*/
+.card__link:hover{
+    color: black;
+    background-color: gold;
+    box-shadow: 2px 2px 5px 5px purple;
+}
+
+.card__title{
+    color:darkmagenta;
+    text-align: center;
+}
+
+/*The h2 heading should span the page*/
+.h2__title{
+    grid-column: span 12;
+    text-align: center;
+    color: blueviolet;
+}
+
+
+.footer{
+    background-color: burlywood;
+}
+
+.footer__menu{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__item{
+    text-align: center;
+    grid-column: span 12;
+    font-size: small;
+}
+
+.footer__link:hover{
+    color:greenyellow;
+}
+
+
+@media screen and (min-width:50rem) {
+    /*At the adaptive breakpoint the menu converts to vertical list*/
+    .nav__menu{
+        padding: 0;
+        margin: 0;
+    
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        list-style: none;
+        justify-items: center;
+    }
+
+    .nav_menu_item{
+        grid-column: span 4;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .cards {
+        display: grid;
+        margin-top: auto;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    .footer__menu{
+        padding: 0;
+        margin: 0;
+    
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        list-style: none;
+        justify-items: center;
+    }
+
+    .footer__item{
+        grid-column: span 3;
+        display: flex;
+        justify-content: space-around;
+    }    
+    
+}

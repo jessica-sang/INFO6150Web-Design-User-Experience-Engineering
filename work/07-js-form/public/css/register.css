@@ -1,0 +1,192 @@
+span {
+    font-weight: bold;
+}
+
+form{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    'name'
+    'name-error'
+    'email1'
+    'email1-error'
+    'email2'
+    'email2-error'
+    'tier'
+    'checkbox'
+    'submit'
+    ;
+}
+.main input{
+    text-align:left;
+    line-height: 1rem;
+    color:rgb(17, 18, 18);
+    width: 15rem;
+
+}
+
+/*name*/
+.register_label{
+    grid-area: name;
+    justify-self:center;
+}
+
+.register_label--border input{
+    border-color: red;
+}
+
+.register-name_error{
+    grid-area: name-error;
+    justify-self:center;
+    display: none;
+    color:red;
+}
+
+.register-name--invalid{
+    display: initial;
+}
+
+/*email*/
+.email_label1{
+    grid-area: email1;
+    justify-self:center;
+}
+
+.email_label1--border input{
+    border-color: red;
+}
+
+.register-email1_error{
+    grid-area: email1-error;
+    justify-self:center;
+    color:red;
+}
+
+/*email comfirm*/
+.email_label2{
+    grid-area: email2;
+    justify-self:center;
+}
+
+.email_label2--border input{
+    border-color: red;
+}
+
+.register-email2_error{
+    grid-area: email2-error;
+    justify-self:center;
+    color:red;
+}
+
+/*tier*/
+.tier_label{
+    grid-area: tier;
+    justify-self:center;
+}
+
+/*checkbox*/
+.check_label{
+    grid-area: checkbox;
+    justify-self:center;
+}
+
+/*submit*/
+.register_submit{
+    grid-area: submit;
+    justify-self:center;
+}
+
+
+.main select{
+    width: 15rem;
+}
+
+.main button{
+    width: 10rem;
+    border: 0;
+    height: 6rem;
+    color: white;
+    font-size:xx-large;
+    background: green;
+    border-radius: 20px;
+}
+
+.main button:hover{
+    background: black;
+    color: yellow;
+}
+
+
+
+@media screen and (max-width: 40rem){
+    .register_label{
+        display: grid;
+        grid-template-columns: repeat(2,1ft);
+        gap:1rem;
+        grid-template-areas: 
+        'name'
+        'input_value'
+        ;
+    }
+
+    .register_label register__name--label{
+        grid-area: name;
+    }
+    .register_label register__name{
+        grid-area: input_value;
+    }
+    
+    .email_label1{
+        display: grid;
+        grid-template-columns: repeat(2,1ft);
+        gap:1rem;
+        grid-template-areas: 
+        'email'
+        'input_value'
+        ;
+    }
+
+    .email_label register__email--label1{
+        grid-area: email;
+    }
+    .email_label email{
+        grid-area: input_value;
+    }
+
+
+    .email_label2{
+        display: grid;
+        grid-template-columns: repeat(2,1ft);
+        grid-template-rows: 1ft;
+        gap:1rem;
+        grid-template-areas: 
+        'email'
+        'input_value'
+        ;
+    }
+
+    .email_label2 register__email--label2{
+        grid-area: email;
+    }
+    .email_label2 email2{
+        grid-area: input_value;
+    }
+
+    .tier_label{
+        display: grid;
+        grid-template-columns: repeat(2,1ft);
+        grid-template-rows: 1ft;
+        gap:1rem;
+        grid-template-areas: 
+        'label'
+        'input_value'
+        ;
+    }
+    .tier_label register__tier-label{
+        grid-area: label;
+    }
+    .tier_label tier{
+        grid-area: input_value;
+    }
+
+}

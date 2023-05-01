@@ -1,0 +1,41 @@
+/* make button in the same line and evenly space between them */
+.Button {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0.5rem;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .Button--button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .Button--link {
+    background-color: transparent;
+    color: #007bff;
+    border-color: transparent;
+    padding: 0;
+  }
+  
+  .Button:hover,
+  .Button:focus {
+    text-decoration: none;
+  }
+  
+  .Button:hover.Button--button,
+  .Button:focus.Button--button {
+    background-color: #0069d9;
+  }
+  
+  .Button:hover.Button--link,
+  .Button:focus.Button--link {
+    text-decoration: underline;
+  }
+

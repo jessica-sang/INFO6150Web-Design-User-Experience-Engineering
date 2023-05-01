@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    background-color: papayawhip;
+    font-family: sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header{
+    grid-area: header;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: burlywood;
+}
+
+/*logo need to present the left of the head */
+.header__logo{
+    align-self: flex-start;
+    aspect-ratio: 1/1;
+}
+
+span {
+    font-weight: bold;
+}
+
+.main{
+    grid-area: main;
+}
+
+/*The "desktop" version will show a two-column layout for the form*/
+form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: 1rem 0.5em 0 1rem;
+    align-items: center;
+}
+
+.item {
+    grid-column: span 6;
+    padding-bottom: 1rem;
+}
+
+input:invalid, select:invalid{
+    border: 1px solid red;
+}
+
+input {
+    height: 2rem;
+    width: 50%;
+    border-radius: 5px;
+}
+
+select {
+    height: 2rem;
+    width: 50%;
+    border-radius: 5px;
+}
+
+button{
+    grid-column:  4 / 8;
+    border: 0;
+    height: 6rem;
+    color: white;
+    font-size:xx-large;
+    background: green;
+    border-radius: 20px;
+}
+
+button:active{
+    background: black;
+}
+
+.footer{
+    grid-area: footer;
+
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: burlywood;
+}
+
+/*The page will be responsive and adaptive, with a breakpoint of your choice that works well with the content*/
+/*The "mobile" version will have a one-column layout for the form*/
+@media screen and (max-width: 50rem){
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    
+    .item {
+        grid-column: span 12;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,121 @@
+
+/* this is for card title */
+.card__title{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.card__content{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+/* this is for card picture 1, should in the right */
+.card__pic1{
+    float:right;
+    aspect-ratio: 1/1;
+    width:125px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* This is for card picture 2, should in the left */
+.card__pic2{
+    float:left;
+    aspect-ratio: 1/1;
+    width: 125px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* This is for card */
+.card{
+    align-items: center;
+    border: 2px solid black;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0;
+    background-color: #eeeeee;
+}
+
+/* this is for mobile size */
+@media screen and (min-width: 44rem){
+
+    .card__picture{
+        aspect-ratio: 1/1;
+        width:50%;
+        justify-self:center;
+        padding: 0.5rem;
+        margin: 0.3rem;
+    }
+
+    .card {
+        align-items: center;
+        border: 2px solid black;
+        margin-top: 0.5rem;
+        margin-bottom: 0rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .card_1{
+        background-color: #eeeeee;
+        display: grid;
+           grid-template-columns: 1ft 1ft;
+           grid-template-rows: 1ft 1ft 1ft;
+           grid-template-areas: 
+           "tit1 pic1"
+           "tex1 pic1"
+           "tex1 null"
+           ;
+        justify-items: center;
+    }
+    
+    .card__title1{
+        grid-area: tit1;
+        justify-self: center;
+    }
+    
+    .card__content1{
+        grid-area: tex1;
+        justify-self: center;
+    }
+    
+    .card__pic1{
+        grid-area: pic1;
+        width: 200px;
+        justify-self: center;
+    }
+    
+    .card_2{
+        background-color: #eeeeee;
+        display: grid;
+           grid-template-columns: 1ft 1ft;
+           grid-template-rows: 1ft 1ft 1ft;
+           grid-template-areas: 
+           "pic1 tit1"
+           "pic1 tex1"
+           "null tex1"
+           ;
+        justify-items: center;
+    }
+    
+    .card__title2{
+        grid-area: tit1;
+    }
+    
+    .card__content2{
+        grid-area: tex1;
+        justify-self: center;
+    }
+    
+    .card__pic2{
+        grid-area: pic1;
+        width: 200px;
+        justify-self: center;
+    }
+
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--title of the website-->
+        <title>Register</title>  
+        <!--linked to two styles format-->
+        <link rel = "stylesheet" href="css/global.css"/>
+        <link rel = "stylesheet" href="css/register.css"/>
+        <script defer src="register.js"></script>
+    </head>
+
+    <body>
+        <!--This page will consist of a <header>-->
+            <header class = "header">
+                <a href="index.html"><img class = "header_logo" src = "image/logo.jpg" alt = "this is the logo for this page"> </a>
+                <h1 class="header_title">The magic Cat Yuumi</h1> 
+                <!--Each page will have a <title> element that names the page.-->
+                <h2 class="page_title">Join us</h2>
+
+            </header>
+    
+            <!-- this is for the menu-->
+            <nav class = "navigation">
+                <!-- Total have three dropdowns-->
+                <!-- First one is about the "index page", which is the main page-->
+                <li>
+                    <button type="button" class="button_home">Homepage</button>
+                    <ul class="navigation_menu_1 deactivate">
+                        <li class="navigation_menu_item"><a class="navigation__link" href="more_image.html">More image of Yuumi</a></li>
+                        <li class="navigation_menu_item"><a class="navigation__link" href="skills.html">Yuumi skills</a></li>
+                        <li class="navigation_menu_item"><a class="navigation__link" href="actions.html"> Yuumi Actions</a></li>
+                    </ul>
+                </li>
+    
+                <!-- Second is about the "about page"-->
+                <li>
+                    <button type="button" class="button_about">About</button>
+                    <ul class="navigation_menu_2 deactivate">
+                        <li class="navigation_menu_item"><a class="navigation__link" href="Aboutus.html"> About us</a></li>
+                        <li class="navigation_menu_item"><a class="navigation__link" href="Aboutyumi.html">About Yuumi</a></li>
+                        <li class="navigation_menu_item"><a class="navigation__link" href="lol.html">About League of Legends</a></li>
+                    </ul>
+                </li>
+    
+                <!-- Third is about the "register page"-->
+    
+                <li>
+                    <button type="button" class="button_register">Register</button>
+                    <ul class="navigation_menu_3 deactivate">
+                        <li class="navigation_menu_item"><a class="navigation__link" href="login.html"> Login</a></li>
+                        <li class="navigation_menu_item"><a class="navigation__link" href="logout.html">Logout</a></li>
+                        <li class="navigation_menu_item"><a class="navigation__link" href="signin.html">Signin</a></li>
+                    </ul>
+                </li>
+        
+            </nav>
+
+        <main class = "main">
+
+            <!--The form will submit to /submit using POST-->
+            <form class = "register" action = "/submit" method="POST">
+                
+                <!--The form will collect the user's name (as field "name")-->
+                <label class = "register_label">
+                    <span class="register_name--label">Name:</span>
+                    <input class = "register_name" name = "Name" >
+                </label>
+                <span class="register-name_error">This field is required, you should put value less than 10</span>
+
+                <!--The form will collect the users email (as field "email")-->
+                <label class = "email_label1">
+                    <span class="register_email--label1">Email:</span>
+                    <input class = "email1" type = "text" name = "Email" placeholder="default@example.com">
+                </label>
+                <span class="register-email1_error"></span>
+
+                <!--The form will collect the users email (as field "email") this is for users to comfirm the email is correct-->
+                <label class= "email_label2">
+                    <span class="register_email--label2">Confirm Email:</span>
+                    <input class="email2" type="text" name="Confirm Email" placeholder="default@example.com">
+                </label>
+                <span class="register-email2_error"></span>
+
+                <!--The form will have checkbox for "Do you want us to send you annoying emails?" (as field "annoy_me")-->
+                <label class="check_label">
+                    <span class = "label">Do you want us to send you annoying emails?</span>
+                    <!--The checkbox will default to being checked when the page is loaded-->
+                    <input class="checkbox" type="checkbox" name="wants-spam" checked/>
+                </label>
+
+                <!--The form will have a drop down offering the options of "Silver Tier", "Gold Tier", or "Platinum Tier" (the data sent is "1", "2", or "3" respectively, as field name "tier")-->
+                <label class="tier_label">
+                    <span class="register_tier-label">Choosing a Tier::&nbsp</span>
+                    <select class="tier" name="tier">
+                        <!--The form will default to having none of these selected, and instead an option with an empty value and the option of "Please select" will be selected by default-->
+                        <option disabled selected value>Please select</option>
+                        <option value="1">Silver Tier</option>
+                        <option value="2">Gold Tier</option>
+                        <option value="3">Platinum Tier</option>
+                    </select>
+                </label>
+
+                <!--The form will have a submit button with the text "Register"-->
+                <button type="submit" class = "register_submit">Register</button>
+
+            </form>                
+
+        </main>
+
+        <footer class = "footer">
+            This is a footer. This is a privacy link <a href="privacy.html"> Privacy Policy</a>
+        </footer>
+
+    </body>
+
+</html>

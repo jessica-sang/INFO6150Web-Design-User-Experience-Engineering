@@ -1,0 +1,240 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    background-color: papayawhip;
+    font-family: sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.skiplink{
+    position:absolute;
+    left:  -100%;
+}
+
+.skiplink:focus{
+    position:static;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: burlywood;
+}
+
+/*logo need to present the left of the h1 text*/
+/*100x100px (logo)*/
+.header_logo{
+    align-self: flex-start;
+    aspect-ratio: 1/1;
+    width: 100px;
+}
+
+.header_title{
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+/*the nav menu is horizontal links spanning the width of the header*/
+.nav_menu{
+    background-color:burlywood;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav__link{
+    transition: 0.5s ease;
+    padding: 1rem;
+}
+
+.nav__link:hover{
+    color: white;
+}
+
+.nav_menu_item1:hover{
+    background-color:cornflowerblue ;
+}
+
+.nav_menu_item2:hover{
+    background-color: cornflowerblue;
+}
+
+.nav_menu_item3:hover{
+    background-color: cornflowerblue;
+}
+
+/* button size would be larger */
+.hamburger__menu{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav li:hover ul,
+.nav li:focus-within ul{
+    max-height: initial;
+}
+.nav li:hover button,
+.nav li:focus-within button{
+    max-height: initial;
+}
+
+.nav li:focus-within ul{
+    outline: none;
+    box-shadow: 0 0 2px 2px #010101;
+    color: rgb(250, 148, 5);
+}
+.nav li:focus-within button{
+    outline: none;
+    box-shadow: 0 0 2px 2px #010101;
+    color: rgb(250, 148, 5);
+}
+
+/*footer*/
+.footer{
+    background-color: burlywood;
+}
+
+/*the links in footer should be in one line*/
+.footer_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.footer_link:hover{
+    color:greenyellow;
+}
+
+
+@media screen and (max-width:44rem) {
+    /*At the adaptive breakpoint the menu converts to vertical list*/
+    .nav_menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .hamburger__menu{
+        display: block;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        text-align: center;
+    } 
+
+    .hamburger__menu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger__menu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger__menu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav_menu{
+       position: fixed;
+       right: -100%;
+       gap:0 ;
+       flex-direction: column;
+       background-color: burlywood;
+       width: 30%;
+       text-align: center;
+       transition: 0.3s;
+
+       display: grid;
+       grid-template-columns: 1ft;
+       grid-template-rows: repeat(3,1ft);
+       grid-template-areas: 
+       'nav1'
+       'nav2'
+       'nav3'
+       ;
+    }
+
+    .nav_menu_item1{
+        border: 0;
+        margin: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-area: nav1;
+    }           
+    
+    .nav_menu_item2{
+        border: 0;
+        margin: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-area: nav2;
+    }
+    
+    .nav_menu_item3{
+        border: 0;
+        margin: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        grid-area: nav3;
+    }
+
+    .nav_menu.active{
+        right: 0;
+    }   
+
+    .footer_menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        gap: 0.5rem;
+    }
+
+}
+
+@media screen and (min-width: 44rem){
+    .hamburger__menu{
+        display: none;
+    } 
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment4 Basic Form </title> 
+        <link rel = "stylesheet" href="styles.css"/>
+        <!--tell the mobile device use the actual device viewport-->
+        <meta name = "viewport" content = "width = device-width">
+    </head>
+
+    <body>
+        
+        <!--The page will have a visually distinct header-->
+        <header class = "header">
+            <img class="header__logo" src="https://placekitten.com/96/139" alt="Cat logo">
+            <h1 class="header__title">Register to be a Cat Person!</h1> 
+        </header>
+
+        <!--The main content of the page (including the form) is inside a <main> element-->
+        <main class = "main">
+
+            <!--The form will submit to /submit using POST-->
+            <form action = "/submit" method="POST">
+                <!--The form will collect the user's name (as field "name")-->
+                <label class = "item">
+                    <span> Name:</span>
+                    <input class = "name" type = "text" name = "name" required/>
+                </label>
+
+                <!--The form will collect the users email (as field "email")-->
+                <label class = "item">
+                    <span> Email:</span>
+                    <input class = "email" type = "email" name = "email" pattern=".+@.*\.com" placeholder="default@example.com" required/>
+                </label>
+
+                <!--The form will have checkbox for "Do you want us to send you annoying emails?" (as field "annoy_me")-->
+                <label class="item">
+                    <span>Do you want us to send you annoying emails?</span>
+                    <!--The checkbox will default to being checked when the page is loaded-->
+                    <input class="checkbox" type="checkbox" name="annoy_me" checked/>
+                </label>
+
+                <!--The form will have a drop down offering the options of "Silver Tier", "Gold Tier", or "Platinum Tier" (the data sent is "1", "2", or "3" respectively, as field name "tier")-->
+                <label class="item">
+                    <span>Tier:</span>
+                    <select class="tier" name="tier" required>
+                        <!--The form will default to having none of these selected, and instead an option with an empty value and the option of "Please select" will be selected by default-->
+                        <option value="">Please select</option>
+                        <option value="1">Silver Tier</option>
+                        <option value="2">Gold Tier</option>
+                        <option value="3">Platinum Tier</option>
+                    </select>
+                </label>
+
+                <!--The form will have a submit button with the text "Register"-->
+                <button type="submit">Register</button>
+
+            </form>                
+
+        </main>
+
+        <!--The page will have a visually distinct footer-->
+        <footer class = "footer">
+            This is a footer. This is a privacy link <a href="privacy.html"> Privacy Policy</a>
+        </footer>
+        
+    </body>
+
+</html>

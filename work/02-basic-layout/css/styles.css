@@ -1,0 +1,83 @@
+/*setting all element in a border box*/
+*{
+    box-sizing: border-box; 
+}
+
+/*setting the footer with the same color as the header*/
+header,footer{
+    background-color: plum;
+}
+
+
+/*this is for hover when slecting links,here all links is in li*/
+.menu li a:hover{
+    background-color:rebeccapurple;
+    color: white;
+}
+
+a{
+    padding: 10px;
+}
+
+/*make the homepage a grid, divided into 3rows and 2 cols*/
+#homepage{
+    display: grid;
+    background-color: pink;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "menu menu"
+    "local-menu main"
+    "footer footer";
+}
+
+/*sign the value into template areas*/
+header{
+    grid-area: menu;
+}
+
+.local-menu{
+    grid-area: local-menu;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/*this is use to setting the menubar menu*/
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px;
+}
+
+.local-menu, main{
+    height: 100%
+}
+
+.local-menu{
+    display: flex;
+    border-right: 1px solid black;
+}
+
+.local-menu li:hover{
+    background-color: plum;
+}
+
+.local-menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+}
+.local-menu li{
+    padding: 20px;
+}
+
+main{
+    padding: 15px;
+}

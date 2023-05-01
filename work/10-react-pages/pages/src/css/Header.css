@@ -1,0 +1,35 @@
+.header {
+    display: grid;
+    grid-template-areas:
+        "header-logo header-title"
+        "header-nav header-nav";
+    grid-template-columns: auto 1fr;
+    background-color: papayawhip ;
+}
+
+.header_logo {
+    grid-area: header-logo;
+    aspect-ratio: 1/1;
+    width: 100px;
+    vertical-align: bottom;
+    animation: spin 1s linear;   
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.header_title {
+    grid-area: header-title;
+    text-align: center;
+}
+
+.header_nav {
+    grid-area: header-nav;
+    background-color: burlywood;
+}

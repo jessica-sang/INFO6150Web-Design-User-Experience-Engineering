@@ -1,0 +1,4 @@
+logo：https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_0.jpg
+bewitvhing：https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_28.jpg
+yubee：https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_19.jpg
+heartseeker：https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_11.jpg

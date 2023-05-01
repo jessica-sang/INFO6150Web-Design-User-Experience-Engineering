@@ -1,0 +1,59 @@
+.home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+}
+
+.home div:hover {
+    box-shadow: 2px 2px 5px 5px grey;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+.card {
+    grid-column: span 12;
+    background-color: burlywood;
+    border-radius: 1rem;
+    margin: 0.25rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.card_title {
+    text-align: center;
+}
+
+.card_pic {
+    aspect-ratio: 1/1;
+    width: 125px;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+
+.card_heading {
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+}
+
+.card_text {
+    margin: 0.5rem 2rem;
+    padding: 0;
+    text-align: left;
+    text-indent: 2rem;
+}
+
+@media screen and (min-width: 44rem){
+    
+    .card {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        margin: 0.25rem;
+    }
+    
+}

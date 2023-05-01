@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--title of the website-->
+        <title>Home Page</title>  
+        <!--linked to two styles format-->
+        <link rel = "stylesheet" href="css/global.css"/>
+        <link rel = "stylesheet" href="css/index.css"/>
+        <!--tell the mobile device use the actual device viewport-->
+        <meta name = "viewport" content = "width = device-width">
+    </head>
+
+    <body>
+        
+        <!--This page will consist of a <header>-->
+        <header class = "header">
+            <!--The header will include a "logo" image (of your choice, subject to the image restrictions given in this file)
+                The logo image will be a link to the home page
+                The logo image will have an alt attribute of ""-->
+            <a href="index.html"><img class = "header_logo" src = "image/logo.jpg" alt = "this is the logo for this page"> </a>
+            <h1 class="header_title">The magic Cat Yuumi</h1>
+            <!--Each page will have a <title> element that names the page.-->
+            <h2 class="page_title">Welcome to the home page of the Yuumi !</h2> 
+        </header>
+
+        <!-- The page will include a <nav> that includes links to each of these pages-->
+        <nav class = "navigation">
+            <!-- Total have three dropdowns-->
+            <!-- First one is about the "index page", which is the main page-->
+            <li>
+                <button type="button" onclick="window.location.href='index.html'" class="button_home">Homepage</button>
+                <ul class="navigation_menu">
+                    <li class="navigation_menu_item"><a class="navigation__link" href="more_image.html">More image of Yuumi</a></li>
+                    <li class="navigation_menu_item"><a class="navigation__link" href="skills.html">Yuumi skills</a></li>
+                    <li class="navigation_menu_item"><a class="navigation__link" href="actions.html"> Yuumi Actions</a></li>
+                </ul>
+            </li>
+
+            <!-- Second is about the "about page"-->
+            <li>
+                <button type="button" onclick="window.location.href='about.html'" class="button_about">About</button>
+                <ul class="navigation_menu">
+                    <li class="navigation_menu_item"><a class="navigation__link" href="Aboutus.html"> About us</a></li>
+                    <li class="navigation_menu_item"><a class="navigation__link" href="Aboutyumi.html">About Yuumi</a></li>
+                    <li class="navigation_menu_item"><a class="navigation__link" href="lol.html">About League of Legends</a></li>
+                </ul>
+            </li>
+
+            <!-- Third is about the "register page"-->
+
+            <li>
+                <button type="button" onclick="window.location.href='register.html'" class="button_register">Register</button>
+                <ul class="navigation_menu">
+                    <li class="navigation_menu_item"><a class="navigation__link" href="login.html"> Login</a></li>
+                    <li class="navigation_menu_item"><a class="navigation__link" href="logout.html">Logout</a></li>
+                    <li class="navigation_menu_item"><a class="navigation__link" href="signin.html">Signin</a></li>
+                </ul>
+            </li>
+    
+        </nav>
+
+        <!--The main section will consist of three cards-->
+        <main class = "main">
+            <!--h2 text-->
+            <h3 class = "h3_title">Yuumi in skins!!</h2>
+            <div class = "cards">
+                <!--this is the first card, there are total three cards-->
+                <div class = "card card_1">
+                    <!--a cat picture-->
+                    <img src = "image/yuubee.jpg" alt = "Yuubee" class = "card_pic">
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card_title"> Yuubee</h3>
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card_text"> Catto munch salmono poop on floor and watch human clean up or i cry and cry and cry unless you pet me, and then maybe i cry just for fun or your pillow is now my pet bed or sleep nap so shred all toilet paper.</div>
+                    <!--A link to "read more"-->
+                    <a href = "cats' link1.html" class = "card_link"> Read more! </a>
+                </div>
+
+                <!--this is the second card-->
+                <div class = "card card_2">
+                    <!--a cat picture-->
+                    <img src = "image/heartseeker.jpg" alt = "Heartseeker Yuumi" class = "card_pic">
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card_title">Heartseeker Yuumi</h3>
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card_text"> Scratch me now! stop scratching me! kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff do doodoo in the litter-box.</div>
+                    <!--A link to "read more"-->
+                    <a href = "cats' link2.html" class = "card_link"> Read more! </a>
+                </div>
+
+                <!--this is the third card-->
+                <div class = "card card_3"> 
+                    <!--a cat picture-->
+                    <img src = "image/bewitvhing.jpg" alt = "Bewitching Yuumi" class = "card_pic">
+                    <!--an h3 heading with text of your choice-->
+                    <h3 class = "card_title"> Bewitching Yuumi</h3>
+                    <!--a block of lorem ipsum-like text or text of your choice, at least one sentence long-->
+                    <div class = "card_text"> Hunt anything. Hiss at vacuum cleaner i heard this rumor where the humans are our owners, pfft, what do they know?!. Meow.</div>
+                    <!--A link to "read more"-->
+                    <a href = "cats' link3.html" class = "card_link"> Read more! </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class = "footer">
+            This is a footer. This is a privacy link <a href="privacy.html"> Privacy Policy</a>
+        </footer>
+
+    </body>
+
+</html>
